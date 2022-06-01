@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+.details{
+width:800px;
+margin: 30px auto 30px;
+height: 50px;
+border: 2px solid rgb(60, 139, 163);
+display:flex;
+justify-content:space-between;
+align-items: center;
+padding:20px;
+font:20px
+}
+
+
+.game-Blocks{
+    width: 853px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    background-color: rgb(78, 78, 166);
+   padding: 10px;
+}
+.game-Blocks.stopClick{
+    pointer-events: none;
+}
+.game-Blocks .block{
+    width:200px;
+    height:200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+   
+
+}
+.game-Blocks .block img{
+ width: 200px;
+ height: 200px;
+  display:block ;
+}
+.game-Blocks .block .face{
+    position:absolute;
+    backface-visibility: hidden;
+
+}
+
+.game-Blocks .block .back{
+    z-index:1;
+    transform: rotateY(180deg);
+
+
+  
+
+}
+.game-Blocks .block .front{
+    z-index:2;
+background-color: black;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    font-size: 200px;
+    line-height:200px;
+    color: white;
+    text-align: center;
+}
+
+.game-Blocks .block.fliping,.game-Blocks .block.same{
+    transform: rotateY(180deg);
+}
